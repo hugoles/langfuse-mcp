@@ -1,0 +1,70 @@
+{
+  "name": "langfuse-mcp",
+  "version": "0.1.0",
+  "description": "MCP server that exposes the Langfuse REST API as tools — query traces, observations, sessions, and scores from any MCP client.",
+  "keywords": [
+    "langfuse",
+    "mcp",
+    "model-context-protocol",
+    "llm-observability",
+    "claude",
+    "anthropic",
+    "tracing",
+    "ai"
+  ],
+  "homepage": "https://github.com/hugoles/langfuse-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/hugoles/langfuse-mcp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugoles/langfuse-mcp.git"
+  },
+  "license": "MIT",
+  "author": "Hugoles (https://github.com/hugoles)",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "langfuse-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@types/node": "^20.0.0",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0",
+    "prettier": "^3.3.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0",
+    "typescript-eslint": "^8.0.0",
+    "vitest": "^2.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
