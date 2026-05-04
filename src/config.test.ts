@@ -39,7 +39,7 @@ describe("loadConfig", () => {
         ...baseEnv,
         LANGFUSE_BASE_URL: "not-a-url",
       }),
-    ).toThrowError(/LANGFUSE_BASE_URL must be a valid URL/);
+    ).toThrowError(/LANGFUSE_BASE_URL must be a full URL/);
   });
 
   it("strips surrounding double quotes from values", () => {

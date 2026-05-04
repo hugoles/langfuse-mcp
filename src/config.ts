@@ -20,7 +20,9 @@ const ConfigSchema = z.object({
   LANGFUSE_BASE_URL: z
     .string()
     .min(1, "LANGFUSE_BASE_URL is required")
-    .url("LANGFUSE_BASE_URL must be a valid URL (e.g. https://cloud.langfuse.com)"),
+    .url(
+      "LANGFUSE_BASE_URL must be a full URL including the scheme (e.g. https://cloud.langfuse.com). The most common cause is a missing 'https://'.",
+    ),
 });
 
 function loadEnvFile(): void {

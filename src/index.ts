@@ -54,11 +54,14 @@ async function main(): Promise<void> {
 
   const config = loadConfig();
   const client = new LangfuseClient(config);
-  const server = new McpServer({ name: PACKAGE_NAME, version: readVersion() });
+  const version = readVersion();
+  const server = new McpServer({ name: PACKAGE_NAME, version });
   registerTools(server, client);
 
   const transport = new StdioServerTransport();
   await server.connect(transport);
+
+  process.stderr.write(`${PACKAGE_NAME} v${version} connected (base=${config.baseUrl})\n`);
 }
 
 main().catch((error: unknown) => {
