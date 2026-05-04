@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.2.0] - 2026-05-04
+## [1.2.0] - 2026-05-04
+
+First public release on npm. Versions `1.0.0` and `1.1.0` were short-lived prototypes published on 2025-11-08 and unpublished the same day; their version numbers are permanently retired by npm policy. This release is the first stable, tested, documented version.
 
 ### Added
 
@@ -32,9 +34,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.0] - 2026-04-28
 
+Pre-release tagged in git only (never published to npm).
+
 ### Added
 
-- Initial release.
+- Initial TypeScript port of the project.
 - MCP server over stdio that wraps the Langfuse REST API.
 - Seven read tools: `listTraces`, `getTrace`, `listObservations`, `getObservation`, `listSessions`, `getSession`, `listScores`.
 - Environment-based configuration with Zod validation.
@@ -42,6 +46,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Vitest test suite covering config, HTTP client, and tool registration.
 - GitHub Actions CI for Node 20 and 22.
 
-[Unreleased]: https://github.com/hugoles/langfuse-mcp/compare/v0.2.0...HEAD
-[0.2.0]: https://github.com/hugoles/langfuse-mcp/compare/v0.1.0...v0.2.0
+[Unreleased]: https://github.com/hugoles/langfuse-mcp/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/hugoles/langfuse-mcp/compare/v0.1.0...v1.2.0
 [0.1.0]: https://github.com/hugoles/langfuse-mcp/releases/tag/v0.1.0

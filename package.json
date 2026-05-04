@@ -1,6 +1,6 @@
 {
   "name": "langfuse-mcp",
-  "version": "0.2.0",
+  "version": "1.2.0",
   "description": "MCP server that exposes the Langfuse REST API as tools — query traces, observations, sessions, scores, prompts, datasets, and metrics from any MCP client.",
   "keywords": [
     "langfuse",

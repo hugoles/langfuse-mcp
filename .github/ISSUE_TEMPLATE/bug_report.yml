@@ -43,7 +43,7 @@ body:
     attributes:
       label: langfuse-mcp version
       description: Output of `npx langfuse-mcp --version` or the version in your package.json.
-      placeholder: 0.2.0
+      placeholder: 1.2.0
     validations:
       required: true
 
