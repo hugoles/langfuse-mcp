@@ -1,0 +1,28 @@
+name: Feature request
+description: Suggest a new tool or improvement
+title: "[feat] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: Describe the use case in your own words. What would you ask the assistant?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed tool / change
+      description: |
+        If proposing a new tool, name it and link to the relevant Langfuse API endpoint(s).
+        If proposing a change, describe the new behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you've considered
+      description: Workarounds or other approaches.

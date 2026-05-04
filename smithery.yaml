@@ -1,0 +1,33 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - LANGFUSE_PUBLIC_KEY
+      - LANGFUSE_SECRET_KEY
+      - LANGFUSE_BASE_URL
+    properties:
+      LANGFUSE_PUBLIC_KEY:
+        type: string
+        title: Langfuse public key
+        description: Project public key, format pk-lf-…
+      LANGFUSE_SECRET_KEY:
+        type: string
+        title: Langfuse secret key
+        description: Project secret key, format sk-lf-…
+        format: password
+      LANGFUSE_BASE_URL:
+        type: string
+        title: Langfuse base URL
+        description: e.g. https://cloud.langfuse.com (EU), https://us.cloud.langfuse.com (US), or your self-hosted URL.
+        default: https://cloud.langfuse.com
+  commandFunction: |
+    (config) => ({
+      command: 'npx',
+      args: ['-y', 'langfuse-mcp'],
+      env: {
+        LANGFUSE_PUBLIC_KEY: config.LANGFUSE_PUBLIC_KEY,
+        LANGFUSE_SECRET_KEY: config.LANGFUSE_SECRET_KEY,
+        LANGFUSE_BASE_URL: config.LANGFUSE_BASE_URL
+      }
+    })

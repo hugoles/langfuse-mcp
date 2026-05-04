@@ -1,14 +1,22 @@
 {
   "name": "langfuse-mcp",
-  "version": "0.1.0",
-  "description": "MCP server that exposes the Langfuse REST API as tools — query traces, observations, sessions, and scores from any MCP client.",
+  "version": "0.2.0",
+  "description": "MCP server that exposes the Langfuse REST API as tools — query traces, observations, sessions, scores, prompts, datasets, and metrics from any MCP client.",
   "keywords": [
     "langfuse",
     "mcp",
+    "mcp-server",
     "model-context-protocol",
     "llm-observability",
+    "observability",
+    "traces",
+    "observations",
+    "prompts",
+    "datasets",
+    "evals",
     "claude",
     "anthropic",
+    "cursor",
     "tracing",
     "ai"
   ],
@@ -31,7 +39,8 @@
   "files": [
     "dist",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "CHANGELOG.md"
   ],
   "engines": {
     "node": ">=20"
